@@ -116,3 +116,86 @@ body {
     left: 20px;
     color: #ff7eb6;
 }
+.poetry {
+    line-height: 1.8;
+    padding: 20px 30px !important;
+    background: #f8faff;
+    border-left: 4px solid #aaccff;
+    font-style: italic;
+    color: #334455;
+}
+
+.poetry em {
+    color: #ff7eb6;
+    font-style: normal;
+    display: block;
+    margin: 15px 0 10px;
+}
+
+/* Celestial Parallax Effect */
+#parallax-stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.stars-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.stars-layer::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    animation: twinkle 3s infinite;
+}
+
+@keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+}
+
+.far-stars { animation: moveStars 80s linear infinite; }
+.medium-stars { animation: moveStars 50s linear infinite; }
+.near-stars { animation: moveStars 30s linear infinite; }
+
+@keyframes moveStars {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(100%); }
+}
+
+/* Create individual stars */
+.stars-layer div {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.far-stars div {
+    width: 1px;
+    height: 1px;
+    box-shadow: 0 0 3px rgba(255,255,255,0.5);
+}
+
+.medium-stars div {
+    width: 2px;
+    height: 2px;
+    box-shadow: 0 0 5px rgba(255,255,255,0.7);
+}
+
+.near-stars div {
+    width: 3px;
+    height: 3px;
+    box-shadow: 0 0 7px rgba(255,255,255,0.9);
+}
+.celestial {
+    position: relative;
+    z-index: 1;
+}

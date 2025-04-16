@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #ff7eb6;
+    --secondary-color: #ff65a3;
+    --background: #fff0f6;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background);
+}
+
+.romantic-header {
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 2px dashed var(--primary-color);
+    margin-bottom: 2rem;
+}
+
+.post-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.post-card::before {
+    content: '✉️';
+    position: absolute;
+    left: -20px;
+    top: -20px;
+    font-size: 2rem;
+    background: var(--background);
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.post-date {
+    color: var(--secondary-color);
+    font-size: 0.9em;
+}
+
+.post-content {
+    margin-top: 1rem;
+    font-size: 1.1em;
+    color: #333;
+}
+
+@media (max-width: 600px) {
+    .post-card {
+        margin: 1rem;
+        padding: 1rem;
+    }
+}
+
+/* Add to style.css */
+.pen-forensic {
+    background: #f8f8f8;
+    padding: 3px 6px;
+    border-radius: 4px;
+    border: 1px solid #eee;
+    font-family: monospace;
+    font-size: 0.9em;
+}
+
+.pen-forensic::before {
+    content: "🖋️ ";
+}
+
+.letter-body {
+    background: #fff5f5;
+    padding: 15px;
+    border-left: 3px solid #ff7eb6;
+    margin: 10px 0;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+/* Add to style.css */
+.forensic-detail {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+    color: #666;
+    margin-top: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.forensic-detail::before {
+    content: "🕵️♂️  ";
+    position: absolute;
+    left: 0;
+}
+
+.lab-context {
+    background: #f8f8ff;
+    border: 1px solid #e0e0ff;
+    padding: 5px;
+    border-radius: 3px;
+}
+.forensic-detail {
+    display: block;
+    padding-left: 40px; /* Tab spacing */
+    text-indent: -20px; /* Pull text back for alignment */
+    margin: 10px 0;
+    position: relative;
+}
+
+.forensic-detail::before {
+    content: "→"; /* Or use "•" for bullet point */
+    position: absolute;
+    left: 20px;
+    color: #ff7eb6;
+}
